@@ -1,31 +1,16 @@
-const express = require("express");
-require("dotenv").config();
+import express from "express";
+import dotenv from "dotenv";
+import connectDB from "./config/db.js";
+// import snippetRoutes from "./routes/snippet.routes.js";
+
+dotenv.config();
 
 const app = express();
 
-const babyNames = [
-  "Aarav",
-  "Vivaan",
-  "Aditya",
-  "Krishna",
-  "Anaya",
-  "Diya",
-  "Ishaan",
-  "Riya",
-  "Kabir",
-  "Meera"
-];
+app.use(express.json());
 
-app.get("/", (req, res) => {
-  const randomIndex = Math.floor(Math.random() * babyNames.length)
-  res.status(200).json({
-    success: true,
-    name: babyNames[randomIndex]
-  });
-});
+// app.use("/api/snippets", snippetRoutes);
 
-const PORT = process.env.PORT || 4000;
+connectDB();
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+app.listen(process.env.PORT, () => console.log("Server running"));
