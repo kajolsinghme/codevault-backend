@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://codevault-frontend-phi.vercel.app/"
+    origin: "https://codevault-frontend-phi.vercel.app"
   })
 );
 
