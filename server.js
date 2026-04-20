@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
-// import snippetRoutes from "./routes/snippet.routes.js";
+import snippetRoutes from "./routes/snippetRoute.js";
 
 dotenv.config();
 
@@ -9,8 +9,8 @@ const app = express();
 
 app.use(express.json());
 
-// app.use("/api/snippets", snippetRoutes);
+app.use("/api/snippets", snippetRoutes);
 
 connectDB();
 
-app.listen(process.env.PORT, () => console.log("Server running"));
+app.listen(process.env.PORT, () => console.log(`Server running on ${process.env.PORT}`));
