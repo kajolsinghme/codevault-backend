@@ -4,7 +4,7 @@
 ```md id="cv1readme"
 #  CodeVault
 
-CodeVault is a full-stack web application to **store, manage, search, and organize code snippets** in one place.  
+CodeVault is a full-stack web application to store, manage, search, and organize code snippets in one place.  
 It allows developers to quickly save reusable code and find it later using search filters like title, language, and tags.
 
 ---
@@ -90,8 +90,6 @@ baseURL: "https://codevault-backend-7ph6.onrender.com/api"
 ## Author
 
 Built by **Kajol** 
-
----
 
 ```
 
